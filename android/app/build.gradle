@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace "com.nihongoquest.app"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.nihongoquest.app"
+        minSdk 24
+        targetSdk 35
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.capacitorjs:core:7.0.0'
+    implementation 'com.capacitorjs:android:7.0.0'
+    implementation 'com.capacitor-community:text-to-speech:5.0.0'
+    implementation 'com.capacitorjs:preferences:7.0.0'
+    implementation 'com.capacitorjs:filesystem:7.0.0'
+    implementation 'com.capacitorjs:splash-screen:7.0.0'
+}
